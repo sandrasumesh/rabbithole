@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+h1 { font-size: 20px; margin: 0 0 4px; }
+h2 { font-size: 18px; margin: 0; }
+h3 { font-size: 16px; margin: 8px 0; }
+h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; color: #475569; margin: 18px 0 6px; }
+.small { font-size: 12px; }
+.muted { color: #64748b; }
+
+.app { display: grid; grid-template-columns: 240px 1fr 320px; height: 100vh; }
+.sidebar, .panel { background: #fff; padding: 18px; overflow-y: auto; }
+.sidebar { border-right: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 10px; }
+.panel { border-left: 1px solid #e2e8f0; }
+.main { display: flex; flex-direction: column; min-width: 0; }
+
+button {
+  font: inherit; font-size: 13px; padding: 7px 12px; border-radius: 8px;
+  border: 1px solid #cbd5e1; background: #fff; cursor: pointer;
+}
+button:hover { background: #f1f5f9; }
+button:disabled { opacity: 0.6; cursor: default; }
+button.primary { background: #2563eb; border-color: #2563eb; color: #fff; }
+button.primary:hover { background: #1d4ed8; }
+button.danger { color: #b91c1c; }
+button.link { border: none; padding: 0; background: none; color: #2563eb; text-align: left; }
+
+.sessions { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.session { width: 100%; text-align: left; display: flex; flex-direction: column; gap: 2px; border-color: transparent; }
+.session.active { background: #eff6ff; border-color: #bfdbfe; }
+.session-name { font-weight: 600; }
+.rec { color: #dc2626; }
+.hint { margin-top: auto; }
+
+.toolbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 1px solid #e2e8f0; background: #fff; }
+.actions { display: flex; gap: 8px; }
+.graph { flex: 1; min-height: 0; background: radial-gradient(#e2e8f0 1px, transparent 1px) 0 0 / 22px 22px; }
+.empty { flex: 1; display: grid; place-items: center; color: #64748b; padding: 40px; text-align: center; }
+.error { background: #fef2f2; color: #b91c1c; padding: 8px 12px; border-radius: 8px; margin: 10px; }
+
+.recap { line-height: 1.55; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; }
+.legend, .gaps, .neighbors { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+.url { word-break: break-all; color: #2563eb; }

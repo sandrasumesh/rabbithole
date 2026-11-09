@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body { font-family: -apple-system, "Segoe UI", sans-serif; width: 280px; margin: 0; padding: 14px; color: #0f172a; }
+      h1 { font-size: 15px; margin: 0 0 8px; }
+      .status { padding: 8px; border-radius: 8px; background: #f1f5f9; font-size: 13px; margin-bottom: 10px; }
+      .status.on { background: #fef2f2; color: #b91c1c; }
+      input, textarea { width: 100%; box-sizing: border-box; font: inherit; font-size: 13px; padding: 6px; border: 1px solid #cbd5e1; border-radius: 6px; }
+      button { font: inherit; font-size: 13px; padding: 6px 10px; border-radius: 6px; border: 1px solid #cbd5e1; background: #fff; cursor: pointer; margin-top: 6px; }
+      button.primary { background: #2563eb; color: #fff; border-color: #2563eb; }
+      details { margin-top: 12px; font-size: 12px; }
+      label { display: block; margin-top: 8px; color: #475569; }
+      a { font-size: 12px; color: #2563eb; }
+      .hidden { display: none; }
+    </style>
+  </head>
+  <body>
+    <h1>🐇 Rabbit Hole Recorder</h1>
+    <div id="status" class="status">Checking…</div>
+
+    <div id="start-box" class="hidden">
+      <input id="name" placeholder="What are you researching?" />
+      <button id="start" class="primary">Start recording</button>
+    </div>
+    <button id="stop" class="hidden">Stop recording</button>
+
+    <p><a href="http://localhost:5173" target="_blank">Open the graph →</a></p>
+
+    <details>
+      <summary>Settings &amp; privacy</summary>
+      <label>Server URL <input id="serverUrl" /></label>
+      <label>Never record these sites (one per line)
+        <textarea id="excluded" rows="4"></textarea>
+      </label>
+      <button id="save">Save</button>
+    </details>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

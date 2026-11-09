@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Rabbit Hole Recorder",
+  "version": "1.0.0",
+  "description": "Records the pages you visit during a research session you start, so you can see your rabbit hole as a graph.",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["http://localhost:3001/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Rabbit Hole Recorder" }
+}
